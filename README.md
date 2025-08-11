@@ -3,7 +3,7 @@
 ## Name
 k2000 - control the Keithley 2000 Digital Multimeter using GPIB
 
-![2x K2000](20170106_k2000.jpg "My two K2000")
+![2x K2000](img/20170106_k2000.jpg "My two K2000")
 
 ## Description
 'k2000' is a program to access and control the Keithley 2000 Digital Multimeter (DMM) over GPIB under Linux. 
@@ -14,6 +14,8 @@ Some features:
 - specify different data acquisition rates
 - record and save data to file
 - **graphical display** ("stripchart recorder") using gnuplot
+
+![K2000 Data Acquisition](img/k2000daq.png "K2000 Data Acquisition")
 
 ## Requirements
 - At least one Keithley 2000 instrument and a GPIB cable.
@@ -144,7 +146,8 @@ LICENSE) for more details.
 ## History
 See top of the k2000.c file. 
 
-I started writing this software in 2004 (based on code I had developed for the Solartron S7150 multimeter) and it was published on my homepage all these years. IUt was only in 2025 that I decided to move it to GitHub :-)
+I started writing this software in 2004 (based on code I had developed for the Solartron S7150 multimeter) and it was published on my homepage all these years. 
+It was only in 2025 that I decided to move it to GitHub :-)
 
 I have initially developed this software on a Pentium-III 600 MHz with SuSE Linux 9.0, Kernel 2.4 and linux-gpib-3.1.101. 
 In 2016, this same system was upgraded to Debian 8 with Kernel 3.16 and linux-gpib-4.0.2. I also switched from the old HP82335 ISA-slot card to an Agilent 82357B USB interface. 
