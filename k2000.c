@@ -32,16 +32,17 @@
  2017-01-07    refined details, added subroutines (JHa)
  2017-07-25    added missing '\n' in log file (JHa)
  2025-08-11    moved everything to GitHub (JHa)
+ 2025-12-20    warning in pclose() fixed, compilation fixed (JHa)
 
  This should compile with any C compiler, something like:
 
- gcc -Wall -O2 -lgpib k2000.c -o k2000 
+ gcc -Wall -O2 k2000.c -o k2000 -lgpib 
 
  Make sure the user accessing GPIB devices is in group 'gpib'.
 
 */
 
-#define VERSION "V20170725"	/* String! */
+#define VERSION "V20251220"	/* String! */
 
 //#define DEBUG  /* diagnostic mode, for development only */
 
@@ -238,7 +239,7 @@ dvm = ibdev(0, pad, 0, T1s, 1, 0);
 if(dvm < 0)
     {
     fprintf(stderr, "ibdev: error trying to open %i: quit.\n", pad);
-    if (do_graph) pclose(gp);
+    if (do_graph && gp != NULL) pclose(gp);
     return ERR_INST;
     }
 
