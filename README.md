@@ -3,7 +3,7 @@
 ## Name
 k2000 - control the Keithley 2000 Digital Multimeter using GPIB
 
-![2x K2000](img/20170106_k2000.jpg "My two K2000")
+![2x K2000](img/k2000_2017.jpg "My two K2000")
 
 ## Description
 'k2000' is a program to access and control the Keithley 2000 Digital Multimeter (DMM) over GPIB under Linux. 
